@@ -1,0 +1,81 @@
+### POST: Create a new Author
+POST http://localhost:8080/authors
+Content-Type: application/json
+
+{
+  "name": "J.K. Rowling",
+  "birthdate": "1965-07-31"
+}
+
+###
+
+### POST: Create a new Book
+POST http://localhost:8080/books
+Content-Type: application/json
+
+{
+  "title": "Harry Potter and the Philosopher's Stone",
+  "isbn": "123456",
+  "publicationDate": "1997-06-26",
+  "copiesAvailable": 5,
+  "author": "/authors/1"
+}
+
+###
+
+### GET: Fetch a specific Book by ID
+GET http://localhost:8080/books/1
+
+###
+
+### GET: Search for a Book by Title
+GET http://localhost:8080/books/search/findByTitleContainingIgnoreCase?title=Harry
+
+###
+
+### GET: Search for Books by Author's Name
+GET http://localhost:8080/books/search/findByAuthorNameContainingIgnoreCase?authorName=Rowling
+
+###
+
+### GET: Fetch all Books with Pagination (2 per page)
+GET http://localhost:8080/books?page=0&size=2
+
+###
+
+### GET: Fetch all Books Sorted by Title in Ascending Order
+GET http://localhost:8080/books?sort=title,asc
+
+###
+
+### PUT: Update Number of Copies Available for a Book
+PUT http://localhost:8080/books/1/copies?copies=10
+
+###
+
+### PUT: Update the entire Book (Full Update)
+PUT http://localhost:8080/books/1
+Content-Type: application/json
+
+{
+  "title": "Harry Potter and the Sorcerer's Stone",
+  "isbn": "1234567890",
+  "publicationDate": "1997-06-26",
+  "copiesAvailable": 7,
+  "author": "/authors/1"
+}
+
+###
+
+### PATCH: Partially Update a Book (Just the Title, for example)
+PATCH http://localhost:8080/books/1
+Content-Type: application/json
+
+{
+  "title": "Harry Potter and the Philosopher's Stone (UK Edition)"
+}
+
+###
+
+### DELETE: Remove a Book by ID
+DELETE http://localhost:8080/books/1
