@@ -1,12 +1,12 @@
 package com.example.esdworkshop.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+
+import java.util.Date;
+import java.util.Set;
 
 /**
  * Represents an author of books.
@@ -36,6 +36,17 @@ public class Author {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
-    // todo: add name, birth date and books association
+    /**
+     * The name of this author.
+     */
+    private String name;
+    /**
+     * The birthdate of this author.
+     */
+    private Date birthdate;
+    /**
+     * The books this author has composed.
+     */
+    @OneToMany(mappedBy = "author", cascade = CascadeType.ALL)
+    private Set<Book> books;
 }

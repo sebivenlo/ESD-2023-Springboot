@@ -1,6 +1,8 @@
 package com.example.esdworkshop.controller;
 
 import com.example.esdworkshop.entity.LoanRecord;
+import com.example.esdworkshop.service.LoanService;
+import com.example.esdworkshop.service.LoanValidationException;
 import org.springframework.data.rest.webmvc.RepositoryRestController;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -13,6 +15,11 @@ import org.springframework.web.bind.annotation.RequestBody;
  */
 @RepositoryRestController("/loans")
 public class LoanController {
+    private final LoanService loanService;
+
+    public LoanController(LoanService loanService) {
+        this.loanService = loanService;
+    }
 
     /**
      * Issues a book based on the given loan record.
@@ -22,11 +29,13 @@ public class LoanController {
      */
     @PostMapping("/issue")
     public ResponseEntity<String> issueBook(@RequestBody LoanRecord loanRecord) {
-        // todo
-
-        // functional requirements:
-        // Use the LoanService to issue the book and return 200 (OK).
-        // Catch any LoanValidationExceptions and handle them appropriately (400 Bad Request).
-        return null;
+        try {
+            loanService.issueBook(loanRecord);
+            return ResponseEntity.ok("Book issued successfully");
+        } catch (LoanValidationException e) {
+            // Handle the validation error, e.g., return a bad request response
+            return ResponseEntity.badRequest().body(e.getMessage());
+        }
     }
 }
+

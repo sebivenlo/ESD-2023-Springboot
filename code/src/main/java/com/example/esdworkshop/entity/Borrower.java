@@ -1,12 +1,11 @@
 package com.example.esdworkshop.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+
+import java.util.Set;
 
 /**
  * Represents a borrower.
@@ -32,5 +31,19 @@ public class Borrower {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    // todo: add name, email, and loanRecords association
+    /**
+     * The name of this borrower.
+     */
+    private String name;
+
+    /**
+     * The email address of this borrower.
+     */
+    private String email;
+
+    /**
+     * The set of loan records associated with this borrower.
+     */
+    @OneToMany(mappedBy = "borrower", cascade = CascadeType.ALL)
+    private Set<LoanRecord> loanRecords;
 }

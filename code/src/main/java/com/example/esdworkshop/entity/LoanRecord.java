@@ -1,12 +1,13 @@
 package com.example.esdworkshop.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+
+import java.util.Date;
 
 /**
  * Represents a loan record.
@@ -25,6 +26,7 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 public class LoanRecord {
+
     /**
      * The unique identifier of this loan record.
      */
@@ -32,5 +34,32 @@ public class LoanRecord {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    // todo: required attributes
+    /**
+     * The date when the book was issued.
+     */
+    private Date issueDate;
+
+    /**
+     * The due date by which the book should be returned.
+     */
+    private Date dueDate;
+
+    /**
+     * The date when the book was returned.
+     */
+    private Date returnDate;
+
+    /**
+     * The borrower associated with this loan record.
+     */
+    @ManyToOne
+    private Borrower borrower;
+
+    /**
+     * The book associated with this loan record.
+     */
+    @ManyToOne
+    @Valid
+    @NotNull(message = "Book cannot be null")
+    private Book book;
 }

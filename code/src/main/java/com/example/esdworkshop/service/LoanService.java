@@ -43,10 +43,13 @@ public class LoanService {
      */
     public void issueBook(LoanRecord loanRecord) {
         Set<ConstraintViolation<LoanRecord>> violations = validator.validate(loanRecord);
-        // todo implement logic
 
-        // functional requirements:
-        // throw a LoanValidationException if there are any validation errors.
-        // otherwise: save the loanRecord
+        if (!violations.isEmpty()) {
+            // Handle validation errors.
+            throw new LoanValidationException(violations);
+        }
+
+        // If book is valid and available, save the loan record
+        loanRecordRepository.save(loanRecord);
     }
 }
