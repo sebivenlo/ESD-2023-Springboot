@@ -85,3 +85,25 @@ FLASK & Micronaut
         * Pros: Is lightweight and comes with built-in extensions that make it very suitable for micro services
     * Micronout
         * Pros: little memory usage, fast startup times and support for distributed tracing 
+
+
+### References 
+
+#### Flask
+
+- https://en.wikipedia.org/wiki/Flask_(web_framework)
+- https://flask.palletsprojects.com/en/3.0.x/
+- https://www.mygreatlearning.com/blog/flask-vs-django/
+- https://dev.to/detimo/python-flask-pros-and-cons-1mlo
+- https://auth0.com/blog/developing-restful-apis-with-python-and-flask/
+
+#### Micronaut
+
+- https://www.baeldung.com/micronaut
+- https://blog.doubleslash.de/vergleich-spring-boot-vs-micronaut-vs-quarkus
+- https://walkingtreetech.medium.com/micronaut-the-potential-poster-boy-for-microservices-7c9a008b1e57
+- https://www.linkedin.com/pulse/micronaut-vs-spring-boot-which-choose-detailed-carolin-winsey/
+- https://walkingtreetech.medium.com/spring-boot-vs-micronaut-the-battle-unleashed-2682354a88e9
+- https://guides.micronaut.io/latest/micronaut-data-jdbc-repository-gradle-java.html
+- https://micronaut-projects.github.io/micronaut-serialization/latest/guide/
+- https://espeo.eu/blog/micronaut-vs-springboot/
