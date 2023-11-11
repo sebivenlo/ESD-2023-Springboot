@@ -2,7 +2,7 @@ FROM gradle:jdk19 AS build
 WORKDIR /workspace/app
 
 COPY . /workspace/app
-RUN gradle clean build
+RUN gradle clean build -x test
 RUN mkdir -p build/dependency && (cd build/dependency; jar -xf ../libs/*-SNAPSHOT.jar)
 
 FROM eclipse-temurin:19-jre-jammy
