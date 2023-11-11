@@ -51,5 +51,5 @@ public class Book {
         return false;
     }
 
-    // todo: add isbn, publicationDate, copiesAvailable, author (many to one) and loanRecords (one to many)
+    // todo: add isbn, publicationDate, copiesAvailable, author and loanRecords
 }

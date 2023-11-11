@@ -32,5 +32,5 @@ public class Borrower {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    // todo: add name, email, and loanRecords (one to many) association
+    // todo: add name, email, and loanRecords association
 }

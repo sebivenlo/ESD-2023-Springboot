@@ -36,10 +36,6 @@ public class Author {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    /**
-     * The name of this author.
-     */
-    private String name;
 
-    // todo: add birth date and books one-to-many association
+    // todo: add name, birth date and books association
 }
