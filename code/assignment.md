@@ -65,10 +65,19 @@ functionalities stripped out for you to implement.
 ### 8. Bonus Challenges
 
 - **Projections**:
-    - Create a projection for the Book entity to show an overview with .
+    - Create a projection for the Book entity to show an overview with information about the author, title and publish
+      date
 - **Event Handling**:
     - Implement an `@RepositoryEventHandler` for Book to log actions on certain events. The base handler is
       available [here.](src/main/java/com/example/esdworkshop/event/BookEventHandler.java)
+- **Implement Historical Data Tracking**
+    - Create a `HistoricalLoanRecord` entity.
+    - Modify `LoanService` to record historical data.
+    - Implement a `HistoricalLoanRecordRepository`.
+    - Create a `HistoricalLoanRecordController` with endpoints for:
+        - Retrieving all historical loan records.
+        - Getting historical records for specific books/borrowers.
+        - Fetching records within a date range.
 
 ## Guidelines
 
