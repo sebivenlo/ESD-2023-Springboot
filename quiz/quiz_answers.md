@@ -14,8 +14,8 @@
    - Explanation: Custom search resources in Spring Data REST are defined by creating query methods in the repository interface. These methods are automatically exposed as search endpoints.
 
 #### Querying
-5. **B. To create custom query methods for repositories**
-   - Explanation: The `@Query` annotation is used to define custom query methods in repository interfaces, allowing for complex queries beyond standard CRUD operations.
+5. **A. To define custom SQL queries**
+   - Explanation: The `@Query` annotation is used to define custom querys in the repository interfaces, allowing for complex queries beyond standard CRUD operations.
 
 6. **B. It uses them to automatically generate corresponding endpoints**
    - Explanation: Spring Data REST automatically exposes query methods as RESTful endpoints based on the method name, following its naming convention for query derivation.
