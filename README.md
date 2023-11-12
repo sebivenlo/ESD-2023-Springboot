@@ -60,25 +60,63 @@ Spring Data REST is a strong choice for Java developers working within the Sprin
 
 ### Core Concepts
 
-
 #### Entity Modelling
+- Class Definition
+  - With annotation: @Entity
+  - Java class
 
 #### Repositories 
+- Used to export resources and automatically create endpoints
+- Different Repository Interfaces (CRUD, JPA, PagingAndSprting, etc.)
+- Custom query support
 
 #### Annotations
+- Provide metadata and configuration
+- Therefore, control various aspects of how REST API is exposed and entities are handled
+- Common annotations include 
+  - public interface BookRepository extends CcrudRepository<Book, Long>
+  - @Entity
+  - @Service
+- Helpful packages can extend features of annotations
+  - Lombok, Jarkarta, etc.
 
 #### Querying
+- Dynamic Query Creation
+- Support for query parameters
+- Support for named queries
+- Interoperability with projections
 
 #### Projections
+- Interface- or Class-based
+- Defined using the @Projection annotation
+- Support for selective Data Exposure
+- Nested Projections
+- Support for lazy loading and query optimization
 
 #### Validation
+- Used to validate entities
+- Marker Annotation Support (@NotNull, @NotEmpty, etc.)
+- Support for cascade validation (@Valid)
+- Error handling with @ControllerAdvice
 
 #### Events
+- Entity Lifecycle Events (@PrePersist, @PostLoad)
+- Repository Events (@BeforeCreate, @AfterSave, etc.)
+- Annotation Driven with Event Classes
+- Support for conditional Events
 
-#### HATEOS
+#### HATEAOS
+- Resource Representation
+- Model Conversion
+- Dynamic Link Creation
+- Affordances
+- HAL Format compliant
 
 #### ALPS
-
+- Semantic Descriptor Profiles
+- Support for Descriptor Types
+- Automatic Documentation Integration
+- Extendable
 
 ### Additional Resources
 - Repositories (https://docs.spring.io/spring-data/rest/docs/current/reference/html/#repository-resources)
