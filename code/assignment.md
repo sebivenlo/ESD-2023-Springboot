@@ -17,18 +17,18 @@ functionalities stripped out for you to implement.
 ### 1. Complete Entity Definitions
 
 - **Book Entity**:
-    - Add additional fields such as `isbn`, `publicationDate`, and `copiesAvailable`.
+    - Add additional fields such as `isbn: String`, `publicationDate: Date`, and `copiesAvailable: Integer`.
     - Implement necessary JPA annotations.
 
 - **Author Entity**:
-    - Add fields like `name` and `birthdate`.
+    - Add fields like `name: String` and `birthdate: Date`.
     - Use appropriate JPA annotations.
 
 - **Borrower Entity**:
     - Define fields and annotate them for persistence.
 
 - **LoanRecord Entity**:
-    - Add fields to represent the loan details (e.g., issueDate, dueDate).
+    - Add fields to represent the loan details (e.g., `issueDate: Date`, `dueDate: Date`, `returnDate: Date`).
 
 ### 2. Establish Entity Relationships
 
