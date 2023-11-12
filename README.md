@@ -9,7 +9,6 @@ That includes:
 - References.
 - Docker (compose) file (if applicable)
 
-
 ### Introduction into Spring Data REST
 
 In the landscape of modern web applications,
@@ -22,25 +21,27 @@ allowing developers to focus on their data models and business logic rather than
 The prerequisites...
 
 ### When and Why should you use Spring Data REST?
-1. Rapid API Development
-   - When to Use: When you need to quickly expose CRUD operations on data models without manual controller code.
-   - Why: Spring Data REST automates RESTful endpoint creation, allowing faster development with minimal boilerplate.
-1. Reducing Boilerplate Code:
-   - When to Use: When you want to minimize manual setup and maintenance of RESTful APIs.
-   - Why: Spring Data REST eliminates the need for explicit controller code, reducing development effort and improving code maintainability.
-2. Data-Centric Applications:
-   - When to Use: For applications focused on data storage and retrieval.
-   - Why: Spring Data REST seamlessly integrates with Spring Data repositories, making it well-suited for data-centric applications.
-3. Resource Discoverability and HATEOAS:
-   - When to Use: When API discoverability and adherence to HATEOAS principles are crucial.
-   - Why: Spring Data REST includes hyperlinks in responses, enabling dynamic resource navigation for clients.
-4. Consistency with Spring Ecosystem:
-   - When to Use: When maintaining consistency within the Spring ecosystem is essential.
-   - Why: Spring Data REST integrates seamlessly with other Spring projects, ensuring a cohesive development experience for Spring developers.
 
+1. Rapid API Development
+    - When to Use: When you need to quickly expose CRUD operations on data models without manual controller code.
+    - Why: Spring Data REST automates RESTful endpoint creation, allowing faster development with minimal boilerplate.
+2. Reducing Boilerplate Code:
+    - When to Use: When you want to minimize manual setup and maintenance of RESTful APIs.
+    - Why: Spring Data REST eliminates the need for explicit controller code, reducing development effort and improving
+      code maintainability.
+3. Data-Centric Applications:
+    - When to Use: For applications focused on data storage and retrieval.
+    - Why: Spring Data REST seamlessly integrates with Spring Data repositories, making it well-suited for data-centric
+      applications.
+4. Resource Discoverability and HATEOAS:
+    - When to Use: When API discoverability and adherence to HATEOAS principles are crucial.
+    - Why: Spring Data REST includes hyperlinks in responses, enabling dynamic resource navigation for clients.
+5. Consistency with Spring Ecosystem:
+    - When to Use: When maintaining consistency within the Spring ecosystem is essential.
+    - Why: Spring Data REST integrates seamlessly with other Spring projects, ensuring a cohesive development experience
+      for Spring developers.
 
 ### How does Spring Data REST compare to other frameworks?
-
 
 | Framework                             | Spring                                                                         | Django                                                                                      | Flask                                                                                                                              | Micronaut                                                                                                                           | Fast API                                                                                                                  | Express                                                                                                   |
 |---------------------------------------|--------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------|
@@ -59,41 +60,46 @@ The prerequisites...
 | **Integration with Front-End**        | Can be seamlessly integrated with various front-end frameworks.                | DRF-YASG and drf-spectacular enable easy API consumption from various front-end frameworks. | Integrated template engine                                                                                                         | Supports multiple template engines and security features                                                                            | With its built-in interactive docs (based on OpenAPI), it's frontend-agnostic and integrates well with modern frameworks. | Easily integrates with JavaScript-based frameworks like React, Vue, and Angular due to its JS foundation. |
 | **Microservices Architecture**        | Aligns well with microservices architecture and is considered cloud-native.    | Simpler to set up for smaller applications or microservices.                                | Is lightweight and comes with built-in extensions that make it very suitable for microservices                                     | Little memory usage, fast startup times and support for distributed tracing                                                         | Lightweight nature makes it suitable for microservices. Easily containerized.                                             | Works well with Docker and Kubernetes for microservices orchestration.                                    |
 
+Ultimately, the choice between frameworks depends on factors such as the programming language, existing technology
+stack, project requirements, and team expertise.
 
-Ultimately, the choice between frameworks depends on factors such as the programming language, existing technology stack, project requirements, and team expertise. 
-
-Spring Data REST is a strong choice for Java developers working within the Spring ecosystem and seeking a streamlined approach to building RESTful APIs with minimal boilerplate code.
-
+Spring Data REST is a strong choice for Java developers working within the Spring ecosystem and seeking a streamlined
+approach to building RESTful APIs with minimal boilerplate code.
 
 ### Core Concepts
 
 #### Entity Modelling
-- Class Definition
-  - With annotation: @Entity
-  - Java class
 
-#### Repositories 
+- Class Definition
+    - With annotation: @Entity
+    - Java class
+
+#### Repositories
+
 - Used to export resources and automatically create endpoints
 - Different Repository Interfaces (CRUD, JPA, PagingAndSprting, etc.)
 - Custom query support
 
 #### Annotations
+
 - Provide metadata and configuration
 - Therefore, control various aspects of how REST API is exposed and entities are handled
-- Common annotations include 
-  - public interface BookRepository extends CcrudRepository<Book, Long>
-  - @Entity
-  - @Service
+- Common annotations include
+    - public interface BookRepository extends CcrudRepository<Book, Long>
+    - @Entity
+    - @Service
 - Helpful packages can extend features of annotations
-  - Lombok, Jarkarta, etc.
+    - Lombok, Jarkarta, etc.
 
 #### Querying
+
 - Dynamic Query Creation
 - Support for query parameters
 - Support for named queries
 - Interoperability with projections
 
 #### Projections
+
 - Interface- or Class-based
 - Defined using the @Projection annotation
 - Support for selective Data Exposure
@@ -101,18 +107,21 @@ Spring Data REST is a strong choice for Java developers working within the Sprin
 - Support for lazy loading and query optimization
 
 #### Validation
+
 - Used to validate entities
 - Marker Annotation Support (@NotNull, @NotEmpty, etc.)
 - Support for cascade validation (@Valid)
 - Error handling with @ControllerAdvice
 
 #### Events
+
 - Entity Lifecycle Events (@PrePersist, @PostLoad)
 - Repository Events (@BeforeCreate, @AfterSave, etc.)
 - Annotation Driven with Event Classes
 - Support for conditional Events
 
 #### HATEAOS
+
 - Resource Representation
 - Model Conversion
 - Dynamic Link Creation
@@ -120,27 +129,30 @@ Spring Data REST is a strong choice for Java developers working within the Sprin
 - HAL Format compliant
 
 #### ALPS
+
 - Semantic Descriptor Profiles
 - Support for Descriptor Types
 - Automatic Documentation Integration
 - Extendable
 
 ### Additional Resources
+
+- Entity Modelling (https://spring.io/guides/gs/accessing-data-jpa/)
 - Repositories (https://docs.spring.io/spring-data/rest/docs/current/reference/html/#repository-resources)
-- Search parameters (https://docs.spring.io/spring-data/rest/docs/current/reference/html/#repository-resources.search-resource)
+- Search
+  parameters (https://docs.spring.io/spring-data/rest/docs/current/reference/html/#repository-resources.search-resource)
 - Querying (https://docs.spring.io/spring-data/rest/docs/current/reference/html/#repository-resources.query-method-resource)
 - Paging/Sorting (https://docs.spring.io/spring-data/rest/docs/current/reference/html/#paging-and-sorting)
 - Projections (https://docs.spring.io/spring-data/rest/docs/current/reference/html/#projections-excerpts)
 - Validation (https://docs.spring.io/spring-data/rest/docs/current/reference/html/#validation)
 - Events (https://docs.spring.io/spring-data/rest/docs/current/reference/html/#events)
-- HAL und HATEOAS (https://en.wikipedia.org/wiki/HATEOAS)
+- HAL & HATEOAS (https://en.wikipedia.org/wiki/HATEOAS)
 - ALPS (https://docs.spring.io/spring-data/rest/docs/current/reference/html/#metadata)
-- Entity Modelling: Wie erstelle ich eine Entity, etc. (https://spring.io/guides/gs/accessing-data-jpa/)
 
+### References
 
-### References 
+#### Django
 
-#### Django 
 - https://spring.io/guides
 - https://docs.djangoproject.com/en/4.2/
 - https://docs.spring.io/spring-data/rest/docs/current/reference/html/#reference
@@ -185,6 +197,7 @@ Spring Data REST is a strong choice for Java developers working within the Sprin
 - https://espeo.eu/blog/micronaut-vs-springboot/
 
 #### FastAPI
+
 - https://fastapi.tiangolo.com/tutorial/path-params/
 - https://fastapi.tiangolo.com/tutorial/first-steps/#interactive-api-docs
 - https://fastapi.tiangolo.com/tutorial/security/
