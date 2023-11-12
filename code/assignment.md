@@ -23,7 +23,7 @@ functionalities stripped out for you to implement.
     - Add fields like `name: String` and `birthdate: Date`.
 
 - **Borrower Entity**:
-    - Define fields and annotate them for persistence.
+    - Add fields like `name: String` and `email: String`.
 
 - **LoanRecord Entity**:
     - Add fields to represent the loan details (e.g., `issueDate: Date`, `dueDate: Date`, `returnDate: Date`).
