@@ -11,10 +11,6 @@ creating robust and efficient RESTful APIs is a cornerstone of successful develo
 Spring Data REST, a pivotal component of the Spring ecosystem, steps in to streamline this process,
 allowing developers to focus on their data models and business logic rather than the intricacies of API implementation.
 
-### Prerequisites
-
-The prerequisites...
-
 ### When and Why should you use Spring Data REST?
 
 1. Rapid API Development
@@ -131,17 +127,16 @@ approach to building RESTful APIs with minimal boilerplate code.
 
 ### Additional Resources
 
-- Entity Modelling (https://spring.io/guides/gs/accessing-data-jpa/)
-- Repositories (https://docs.spring.io/spring-data/rest/docs/current/reference/html/#repository-resources)
-- Search
-  parameters (https://docs.spring.io/spring-data/rest/docs/current/reference/html/#repository-resources.search-resource)
-- Querying (https://docs.spring.io/spring-data/rest/docs/current/reference/html/#repository-resources.query-method-resource)
-- Paging/Sorting (https://docs.spring.io/spring-data/rest/docs/current/reference/html/#paging-and-sorting)
-- Projections (https://docs.spring.io/spring-data/rest/docs/current/reference/html/#projections-excerpts)
-- Validation (https://docs.spring.io/spring-data/rest/docs/current/reference/html/#validation)
-- Events (https://docs.spring.io/spring-data/rest/docs/current/reference/html/#events)
-- HAL & HATEOAS (https://en.wikipedia.org/wiki/HATEOAS)
-- ALPS (https://docs.spring.io/spring-data/rest/docs/current/reference/html/#metadata)
+- [Entity Modelling](https://spring.io/guides/gs/accessing-data-jpa/)
+- [Repositories](https://docs.spring.io/spring-data/rest/docs/current/reference/html/#repository-resources)
+- [Search parameters](https://docs.spring.io/spring-data/rest/docs/current/reference/html/#repository-resources.search-resource)
+- [Querying](https://docs.spring.io/spring-data/rest/docs/current/reference/html/#repository-resources.query-method-resource)
+- [Paging/Sorting](https://docs.spring.io/spring-data/rest/docs/current/reference/html/#paging-and-sorting)
+- [Projections](https://docs.spring.io/spring-data/rest/docs/current/reference/html/#projections-excerpts)
+- [Validation](https://docs.spring.io/spring-data/rest/docs/current/reference/html/#validation)
+- [Events](https://docs.spring.io/spring-data/rest/docs/current/reference/html/#events)
+- [HAL & HATEOAS](https://en.wikipedia.org/wiki/HATEOAS)
+- [ALPS](https://docs.spring.io/spring-data/rest/docs/current/reference/html/#metadata)
 
 ### References
 
