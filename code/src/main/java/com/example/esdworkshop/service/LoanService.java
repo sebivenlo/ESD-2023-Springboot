@@ -1,6 +1,8 @@
 package com.example.esdworkshop.service;
 
+import com.example.esdworkshop.entity.HistoricalLoanRecord;
 import com.example.esdworkshop.entity.LoanRecord;
+import com.example.esdworkshop.repository.HistoricalLoanRecordRepository;
 import com.example.esdworkshop.repository.LoanRecordRepository;
 import jakarta.validation.ConstraintViolation;
 import jakarta.validation.Validator;
@@ -25,14 +27,20 @@ public class LoanService {
     private final LoanRecordRepository loanRecordRepository;
 
     /**
+     * Repository used to manage and persist historical loan records.
+     */
+    private final HistoricalLoanRecordRepository historicalLoanRecordRepository;
+
+    /**
      * Constructs a new instance of LoanService with the specified validator and loan record repository.
      *
      * @param validator            the validator to be used for validating loan records.
      * @param loanRecordRepository the repository used for managing and persisting loan records.
      */
-    public LoanService(Validator validator, LoanRecordRepository loanRecordRepository) {
+    public LoanService(Validator validator, LoanRecordRepository loanRecordRepository, HistoricalLoanRecordRepository historicalLoanRecordRepository) {
         this.validator = validator;
         this.loanRecordRepository = loanRecordRepository;
+        this.historicalLoanRecordRepository = historicalLoanRecordRepository;
     }
 
     /**
@@ -51,5 +59,14 @@ public class LoanService {
 
         // If book is valid and available, save the loan record
         loanRecordRepository.save(loanRecord);
+
+        // Save the historical record
+        HistoricalLoanRecord historicalRecord = new HistoricalLoanRecord();
+        historicalRecord.setBook(loanRecord.getBook());
+        historicalRecord.setBorrower(loanRecord.getBorrower());
+        historicalRecord.setIssueDate(loanRecord.getIssueDate());
+        historicalRecord.setStatus("ISSUED");
+
+        historicalLoanRecordRepository.save(historicalRecord);
     }
 }
