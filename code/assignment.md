@@ -40,7 +40,7 @@ functionalities stripped out for you to implement.
     - Add custom query methods to search for books by title or author.
 
 - **Other Repositories**:
-    - If applicable, create repositories for other entities (Author, Borrower, LoanRecord).
+    - Create repositories for other entities (Author, Borrower).
 
 ### 4. Implement Service Layer Logic
 
@@ -56,11 +56,20 @@ functionalities stripped out for you to implement.
 
 - Create custom queries in your repositories to demonstrate different search capabilities.
 
-### 7. Add Paging and Sorting
+### 7. Extend the Loan Controller
+
+- Implement the `issueBook` method in the `LoanController`.
+
+### 8. Add Paging and Sorting
 
 - Modify repository methods to support pagination and sorting for list queries.
 
-### 8. Bonus Challenges
+<details>
+<summary>Hint</summary>
+This can be done by implementing the JpaRepository instead of the CrudRepository.
+</details>
+
+### 9. Bonus Challenges
 
 - **Projections**:
     - Create a projection for the Book entity to show an overview with information about the author, title and publish
@@ -81,7 +90,8 @@ functionalities stripped out for you to implement.
 
 - Complete the tasks outlined above.
 - Ensure all features are working as expected.
-- Test your endpoints using Postman or another REST client.
+- Test your endpoints using Postman or another REST client. The sample requests are
+  available [here](src/book_requests.http).
 
 ## Additional Resources
 
