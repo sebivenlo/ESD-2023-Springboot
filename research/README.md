@@ -19,9 +19,9 @@ other popular web frameworks.
 
 ### Comparative Analysis of Web Frameworks
 
-1. [Spring vs. Django](comparison/Django.md)
-2. [Spring vs. Express](comparison/Express.md)
-3. [Spring vs. FastAPI](comparison/FastAPI.md)
-4. [Spring vs. Flask and Micronaut](comparison/Flask_Micronaut.md)
-5. [Spring vs. Loopback](comparison/Loopback.md)
-6. [Spring vs. Quarkus](comparison/Quarkus.md)
+1. [Spring vs. Django](comparison/django.md)
+2. [Spring vs. Express](comparison/express.md)
+3. [Spring vs. FastAPI](comparison/fast_api.md)
+4. [Spring vs. Flask and Micronaut](comparison/flask_micronaut.md)
+5. [Spring vs. Loopback](comparison/loopback.md)
+6. [Spring vs. Quarkus](comparison/quarkus.md)
