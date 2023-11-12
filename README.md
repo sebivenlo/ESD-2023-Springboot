@@ -3,11 +3,13 @@
 ## Table of Contents
 
 1. [Assignment](#assignment)
-2. [Introduction to Spring Data Rest](#introduction-to-spring-data-rest)
-3. [When and Why should you use Spring Data REST?](#when-and-why-should-you-use-spring-data-rest)
-4. [Comparison between other Frameworks](#comparison-to-other-frameworks)
-5. [Core Concepts](#core-concepts)
-6. [References](#references)
+2. [Detailed Research about Spring Data Rest](#detailed-research-about-spring-data-rest)
+3. [Docker Image](#docker-image)
+4. [Introduction to Spring Data Rest](#introduction-to-spring-data-rest)
+5. [When and Why should you use Spring Data REST?](#when-and-why-should-you-use-spring-data-rest)
+6. [Comparison between other Frameworks](#comparison-to-other-frameworks)
+7. [Core Concepts](#core-concepts)
+8. [References](#references)
 
 ### Assignment
 
@@ -17,6 +19,29 @@ A link to the assignment can be found [here](code/assignment.md).
 
 Our detailed research about the finer details of Spring Data Rest is
 available [here.](/research/spring_breakdown/README.md)
+
+### Docker Image
+
+> [!IMPORTANT]  
+> You do not need to use this image while working on the assignment.
+
+A pre-built image of the solution is available by executing the following command:
+
+```shell
+docker pull ghcr.io/sebivenlo/springboot_workshop_solution:latest
+```
+
+Alternatively, the same image is also publicly available via:
+
+```shell
+docker pull ntheres/esd_spring_data_rest
+```
+
+If you want to build from scratch, navigate to the `/code` directory and execute the following:
+
+```shell
+docker build -t esd_workshop_solution:latest .
+```
 
 ### Introduction to Spring Data REST
 

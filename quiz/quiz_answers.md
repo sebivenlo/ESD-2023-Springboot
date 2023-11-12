@@ -14,8 +14,8 @@
    - Explanation: Custom search resources in Spring Data REST are defined by creating query methods in the repository interface. These methods are automatically exposed as search endpoints.
 
 #### Querying
-5. **B. To create custom query methods for repositories**
-   - Explanation: The `@Query` annotation is used to define custom query methods in repository interfaces, allowing for complex queries beyond standard CRUD operations.
+5. **A. To define custom SQL queries**
+   - Explanation: The `@Query` annotation is used to define custom querys in the repository interfaces, allowing for complex queries beyond standard CRUD operations.
 
 6. **B. It uses them to automatically generate corresponding endpoints**
    - Explanation: Spring Data REST automatically exposes query methods as RESTful endpoints based on the method name, following its naming convention for query derivation.
@@ -31,33 +31,30 @@
 9. **A. To ensure that data meets business rules before it is saved**
     - Explanation: The `@Valid` annotation is used in conjunction with Spring's validation mechanism to ensure that data adheres to constraints defined in the domain model before persisting it.
 
-10. **B. On repository methods**
-    - Explanation: The `@Valid` annotation is typically used on repository methods, particularly on `save` methods, to trigger validation of the passed entity before it is saved to the database.
-
 #### Events
-11. **B. To provide a way to react to lifecycle changes of entities**
+10. **B. To provide a way to react to lifecycle changes of entities**
     - Explanation: Events in Spring Data REST are used to hook into the lifecycle of entities, allowing custom logic to be executed at various points, such as before or after saving an entity.
 
-12. **A. `BeforeCreateEvent`**
+11. **A. `BeforeCreateEvent`**
     - Explanation: `BeforeCreateEvent` is an example of a Spring Data REST lifecycle event, triggered before a new entity is created and saved.
 
 #### HAL and HATEOAS
-13. **B. Hypertext Application Language**
+12. **B. Hypertext Application Language**
     - Explanation: HAL (Hypertext Application Language) is a simple format that gives a consistent and easy way to hyperlink between resources in API.
 
-14. **A. To provide a way to navigate REST APIs through hyperlinks**
+13. **A. To provide a way to navigate REST APIs through hyperlinks**
     - Explanation: HATEOAS (Hypermedia as the Engine of Application State) is a constraint of REST application architecture that keeps the RESTful style architecture unique from most other network application architectures.
 
 #### ALPS
-15. **A. Application Level Profile Semantics**
+14. **A. Application Level Profile Semantics**
     - Explanation: ALPS is a data format used to describe the semantics of data and interactions in a RESTful API, providing a way to understand the API's capabilities and data structures.
 
-16. **A. To provide metadata about the API’s data structures and capabilities**
+15. **A. To provide metadata about the API’s data structures and capabilities**
     - Explanation: ALPS is used in Spring Data REST to describe the semantics and capabilities of the API, offering a machine-readable format for API metadata.
 
 #### Entity Modelling
-17. **A. A Java class that represents a database table**
+16. **A. A Java class that represents a database table**
     - Explanation: In Spring Data REST, an entity is a Java class annotated with `@Entity`, representing a table in a database where each instance of the class corresponds to a row in the table.
 
-18. **A. `@Entity`**
+17. **A. `@Entity`**
     - Explanation: The `@Entity` annotation is used to mark a Java class as an entity, which means it is bound to a database table.

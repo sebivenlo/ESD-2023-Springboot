@@ -1,4 +1,5 @@
 # Spring data Rest Quiz
+A Quiz about all the topics covered, containig 17 multiple choice questions to answer.
 
 ## Link to the Kahoot game 
 
