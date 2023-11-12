@@ -3,11 +3,12 @@
 ## Table of Contents
 
 1. [Assignment](#assignment)
-2. [Introduction to Spring Data Rest](#introduction-to-spring-data-rest)
-3. [When and Why should you use Spring Data REST?](#when-and-why-should-you-use-spring-data-rest)
-4. [Comparison between other Frameworks](#comparison-to-other-frameworks)
-5. [Core Concepts](#core-concepts)
-6. [References](#references)
+2. [Detailed Research about Spring Data Rest](#detailed-research-about-spring-data-rest)
+3. [Introduction to Spring Data Rest](#introduction-to-spring-data-rest)
+4. [When and Why should you use Spring Data REST?](#when-and-why-should-you-use-spring-data-rest)
+5. [Comparison between other Frameworks](#comparison-to-other-frameworks)
+6. [Core Concepts](#core-concepts)
+7. [References](#references)
 
 ### Assignment
 
