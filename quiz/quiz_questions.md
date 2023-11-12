@@ -43,7 +43,7 @@
 7. **What is a projection in the context of Spring Data REST?**
    - A. A database projection to reduce the number of columns returned
    - B. A way to alter the view of an entity without changing the entity itself
-   - C. A method to project data onto a different data model
+   - C. A method to project data onto a different entity model
    - D. A tool for visualizing data relationships
 
 8. **How are projections defined in Spring Data REST?**
