@@ -1,13 +1,8 @@
-# ESD template
+# Spring Data Rest Workshop
 
-Please make sure all artifacts are in this GitHub repository.  
-That includes:
+### Assignment
 
-- Code
-- Workshop materials
-- Presentation (if applicable)
-- References.
-- Docker (compose) file (if applicable)
+A link to the assignment can be found [here](code/assignment.md).
 
 ### Introduction into Spring Data REST
 
@@ -141,7 +136,8 @@ approach to building RESTful APIs with minimal boilerplate code.
 - Repositories (https://docs.spring.io/spring-data/rest/docs/current/reference/html/#repository-resources)
 - Search
   parameters (https://docs.spring.io/spring-data/rest/docs/current/reference/html/#repository-resources.search-resource)
-- Querying (https://docs.spring.io/spring-data/rest/docs/current/reference/html/#repository-resources.query-method-resource)
+-
+Querying (https://docs.spring.io/spring-data/rest/docs/current/reference/html/#repository-resources.query-method-resource)
 - Paging/Sorting (https://docs.spring.io/spring-data/rest/docs/current/reference/html/#paging-and-sorting)
 - Projections (https://docs.spring.io/spring-data/rest/docs/current/reference/html/#projections-excerpts)
 - Validation (https://docs.spring.io/spring-data/rest/docs/current/reference/html/#validation)
