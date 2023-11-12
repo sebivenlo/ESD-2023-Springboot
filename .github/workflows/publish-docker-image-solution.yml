@@ -1,0 +1,30 @@
+name: Docker Image Solution
+
+on:
+  push:
+    branches: [ "solution" ]
+
+jobs:
+
+  publish-docker-image:
+    runs-on: ubuntu-latest
+
+    permissions:
+      packages: write
+      contents: read
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Log in to GitHub Docker Registry
+        uses: docker/login-action@v3.0.0
+        with:
+          registry: https://ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+      - name: Build and push Docker image
+        uses: docker/build-push-action@v5.0.0
+        with:
+          context: ./code
+          push: true
+          tags: |
+            ghcr.io/sebivenlo/springboot_workshop_solution:latest
