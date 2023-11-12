@@ -11,7 +11,7 @@
    - A. `CrudRepository` or `PagingAndSortingRepository`
    - B. `JpaRepository`
    - C. `MongoRepository`
-   - D. Both A and B
+   - D. Both RED and BLUE
 
 #### Search Parameters
 3. **Which HTTP method is commonly used to perform searches in Spring Data REST?**
@@ -29,7 +29,7 @@
 #### Querying
 5. **What is the purpose of `@Query` annotation in Spring Data REST?**
    - A. To define custom SQL queries
-   - B. To create custom query methods for repositories
+   - B. To secure a safe query response
    - C. To specify the HTTP query parameters
    - D. To validate query responses
 
