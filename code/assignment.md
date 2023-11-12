@@ -18,11 +18,9 @@ functionalities stripped out for you to implement.
 
 - **Book Entity**:
     - Add additional fields such as `isbn: String`, `publicationDate: Date`, and `copiesAvailable: Integer`.
-    - Implement necessary JPA annotations.
 
 - **Author Entity**:
     - Add fields like `name: String` and `birthdate: Date`.
-    - Use appropriate JPA annotations.
 
 - **Borrower Entity**:
     - Define fields and annotate them for persistence.
