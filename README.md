@@ -22,35 +22,42 @@ allowing developers to focus on their data models and business logic rather than
 The prerequisites...
 
 ### When and Why should you use Spring Data REST?
-
-1.When to Use: When you need to quickly expose CRUD operations on data models without manual controller code.
-2.Why: Spring Data REST automates RESTful endpoint creation, allowing faster development with minimal boilerplate.
-1.Reducing Boilerplate Code:
-1.When to Use: When you want to minimize manual setup and maintenance of RESTful APIs.
-2.Why: Spring Data REST eliminates the need for explicit controller code, reducing development effort and improving code maintainability.
-2.Data-Centric Applications:
-1.When to Use: For applications focused on data storage and retrieval.
-2.Why: Spring Data REST seamlessly integrates with Spring Data repositories, making it well-suited for data-centric applications.
-3.Resource Discoverability and HATEOAS:
-1.When to Use: When API discoverability and adherence to HATEOAS principles are crucial.
-2.Why: Spring Data REST includes hyperlinks in responses, enabling dynamic resource navigation for clients.
-4.Consistency with Spring Ecosystem:
-1.When to Use: When maintaining consistency within the Spring ecosystem is essential.
-2.Why: Spring Data REST integrates seamlessly with other Spring projects, ensuring a cohesive development experience for Spring developers.
+1. Rapid API Development
+   - When to Use: When you need to quickly expose CRUD operations on data models without manual controller code.
+   - Why: Spring Data REST automates RESTful endpoint creation, allowing faster development with minimal boilerplate.
+1. Reducing Boilerplate Code:
+   - When to Use: When you want to minimize manual setup and maintenance of RESTful APIs.
+   - Why: Spring Data REST eliminates the need for explicit controller code, reducing development effort and improving code maintainability.
+2. Data-Centric Applications:
+   - When to Use: For applications focused on data storage and retrieval.
+   - Why: Spring Data REST seamlessly integrates with Spring Data repositories, making it well-suited for data-centric applications.
+3. Resource Discoverability and HATEOAS:
+   - When to Use: When API discoverability and adherence to HATEOAS principles are crucial.
+   - Why: Spring Data REST includes hyperlinks in responses, enabling dynamic resource navigation for clients.
+4. Consistency with Spring Ecosystem:
+   - When to Use: When maintaining consistency within the Spring ecosystem is essential.
+   - Why: Spring Data REST integrates seamlessly with other Spring projects, ensuring a cohesive development experience for Spring developers.
 
 
 ### How does Spring Data REST compare to other frameworks?
 
 
-| Framework                       | Spring | Micronaut | Flask  | Django | Fast API |
-|---------------------------------|--------|-----------|--------|--------|----------|
-| **Language**                    | Java   | Java      | Python | Pyhton | Java     |
-| **Ease of Use**                 | tt     | tt        | tt     | tt     | tt       |
-| **Community and Documentation** | tt     | tt        | tt     | t      | tt       |
-| **Security**                    | tt     | tt        | tt     | tt     | tt       |
-| **REST API**                    | tt     | tt        | tt     | tt     | tt       |
-| **Scalability**                 | tt     | tt        | tt     | tt     | tttt     |
-| **Database Support**            | tt     | tt        | tt     | tt     | tt       |
+| Framework                             | Spring                                                                         | Django                                                                                      | Flask                                                                                                                              | Micronaut                                                                                                                           | Fast API                                                                                                                  | Express                                                                                                   |
+|---------------------------------------|--------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------|
+| **Language**                          | Java, Kotlin                                                                   | Python                                                                                      | Python                                                                                                                             | Pyhton                                                                                                                              | Python                                                                                                                    | JavaScript                                                                                                |
+| **Ease of Use**                       | Simplified, conventions-over-configurations, opinionated framework             | Known for its "batteries-included" philosophy.                                              | Lightweight, flexible framework comes without any dependencies                                                                     | Best known for at compile time dependency injection mechanism that results in faster application setup and smaller memory footprint | Known for its intuitive syntax and Pythonic nature.                                                                       | Lightweight and minimal, offering great flexibility.                                                      |
+| **Community and Documentation**       | Strong and active community, robust documentation.                             | Extensive documentation, active community.                                                  | Extensive documentation and active community                                                                                       | Growing popularity and user base with good documentation available                                                                  | Growing community due to its recent surge in popularity.                                                                  | Large and active community given its association with Node.js.                                            |
+| **Security**                          | Wide range of security features, robust security for enterprise applications.  | Provides out-of-the-box support for many security features.                                 | Built in security features for common threads and secure cookies                                                                   | Offers standard security features and supports OAuth2                                                                               | Provides security utilities directly, including OAuth2 password flow and scopes.                                          | Relies on middleware like Helmet and Passport for security.                                               |
+| **REST API**                          | Easily exposes data models via REST.                                           | Great flexibility in designing APIs, provides functionalities like serialization.           | Simple to develop because the application will be lightweight and flexible                                                         | Very flexible and performant with features like provided serilization                                                               | Asynchronous support offers performance advantages.                                                                       | Offers flexibility in defining endpoints and HTTP methods.                                                |
+| **Scalability**                       | Excellent scalability.                                                         | Relatively lightweight, scalable.                                                           | Offers flexibility to expand the application quickly                                                                               | Is designed to be scalable and be very performant at the same time                                                                  | Asynchronous capabilities ensure efficient handling of I/O bound operations.                                              | Being lightweight, it’s highly scalable with the right configurations.                                    |
+| **Database Support**                  | Powerful ORM with JPA, supports a wide range of databases.                     | High-level, easy-to-use ORM.                                                                | Comes with SQLAlchemyAdaport which supports many SQL databases                                                                     | Micronaut Data is based on JPA. Offers wide variety of database support                                                             | ORM agnostic but has good community support for SQLAlchemy and Tortoise-ORM.                                              | Uses ORM tools like Sequelize or Mongoose for MongoDB.                                                    |
+| **Development Speed**                 | Accelerates development speed for standard applications.                       | Facilitates rapid development due to simplicity.                                            | Fast debugger, easily scalable and simple to develop. Little code required                                                         | Easily testable and modular with fast startup time                                                                                  | Rapid development due to intuitive design.                                                                                | Enables rapid development given its minimalistic nature.                                                  |
+| **Testing**                           | Provides a strong testing framework, supporting various testing methodologies. | Offers a user-friendly testing framework.                                                   | Allows for unit testing through its integrated support, built-in development server, fast debugger and restful request dispatching | Offers integrated testing framework that includes capabilities like dependency injection in tests and simple bean mocking           | Easy testing based on Python’s pytest.                                                                                    | Utilizes libraries like Mocha, Chai, and Jest for testing.                                                |
+| **HATEAOS**                           | Adheres to HATEOAS, facilitating API discoverability and evolution.            | Developers have flexibility to design APIs as per requirements.                             | API’s are coherent and neat. Strong WSGI support                                                                                   | Quickly maturing framework                                                                                                          | Does not have built-in HATEOAS support.                                                                                   | HATEOAS can be implemented, but it’s manual and relies on third-party libraries.                          |
+| **Automated API Exposure**            | Automatically exposes model repositories as HTTP endpoints.                    | Automatically exposes model repositories as HTTP endpoints.                                 | Enables exposure of Python functions as API’s                                                                                      | Uses controllers to expose Rest API’s                                                                                               | Requires manual endpoint definition, but offers flexibility.                                                              | No automatic exposure; developers define what gets exposed.                                               |
+| **Data Validation and Serialization** | Automatically handles serialization/deserialization.                           | Provides robust and flexible serialization framework.                                       | Flexible serialisation that is easily implemented                                                                                  | Supports Jackson Databind and its own Micronaut Serialisation.                                                                      | Utilizes Pydantic for data validation and serialization, providing automatic error handling                               | Utilizes middleware like express-validator for validation.                                                |
+| **Integration with Front-End**        | Can be seamlessly integrated with various front-end frameworks.                | DRF-YASG and drf-spectacular enable easy API consumption from various front-end frameworks. | Integrated template engine                                                                                                         | Supports multiple template engines and security features                                                                            | With its built-in interactive docs (based on OpenAPI), it's frontend-agnostic and integrates well with modern frameworks. | Easily integrates with JavaScript-based frameworks like React, Vue, and Angular due to its JS foundation. |
+| **Microservices Architecture**        | Aligns well with microservices architecture and is considered cloud-native.    | Simpler to set up for smaller applications or microservices.                                | Is lightweight and comes with built-in extensions that make it very suitable for microservices                                     | Little memory usage, fast startup times and support for distributed tracing                                                         | Lightweight nature makes it suitable for microservices. Easily containerized.                                             | Works well with Docker and Kubernetes for microservices orchestration.                                    |
 
 
 Ultimately, the choice between frameworks depends on factors such as the programming language, existing technology stack, project requirements, and team expertise. 
@@ -176,3 +183,13 @@ Spring Data REST is a strong choice for Java developers working within the Sprin
 - https://guides.micronaut.io/latest/micronaut-data-jdbc-repository-gradle-java.html
 - https://micronaut-projects.github.io/micronaut-serialization/latest/guide/
 - https://espeo.eu/blog/micronaut-vs-springboot/
+
+#### FastAPI
+- https://fastapi.tiangolo.com/tutorial/path-params/
+- https://fastapi.tiangolo.com/tutorial/first-steps/#interactive-api-docs
+- https://fastapi.tiangolo.com/tutorial/security/
+- https://fastapi.tiangolo.com/tutorial/path-params-numeric-validations/
+- https://fastapi.tiangolo.com/#performance
+- https://fastapi.tiangolo.com/tutorial/sql-databases/
+- https://fastapi.tiangolo.com/tutorial/testing/
+- https://fastapi.tiangolo.com/tutorial/body/
