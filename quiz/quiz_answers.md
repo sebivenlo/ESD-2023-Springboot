@@ -20,51 +20,44 @@
 6. **B. It uses them to automatically generate corresponding endpoints**
    - Explanation: Spring Data REST automatically exposes query methods as RESTful endpoints based on the method name, following its naming convention for query derivation.
 
-#### Paging/Sorting
-7. **C. `page` and `size`**
-   - Explanation: In Spring Data REST, paging is typically implemented using `page` (to specify the page number) and `size` (to specify the number of records per page).
-
-8. **A. By using the `@SortDefault` annotation**
-   - Explanation: The `@SortDefault` annotation is used to specify a default sort order for query methods in the repository interfaces.
-
 #### Projections
-9. **B. A way to alter the view of an entity without changing the entity itself**
+7. **B. A way to alter the view of an entity without changing the entity itself**
    - Explanation: Projections in Spring Data REST allow for creating customized views of an entity, enabling the exposure of a subset of attributes or the inclusion of computed properties.
 
-10. **B. By creating an interface with the desired view properties**
+8. **B. By creating an interface with the desired view properties**
     - Explanation: Projections are defined by creating an interface with getter methods for the properties to be included in the view.
 
 #### Validation
-11. **A. To ensure that data meets business rules before it is saved**
+9. **A. To ensure that data meets business rules before it is saved**
     - Explanation: The `@Valid` annotation is used in conjunction with Spring's validation mechanism to ensure that data adheres to constraints defined in the domain model before persisting it.
 
-12. **B. On repository methods**
+10. **B. On repository methods**
     - Explanation: The `@Valid` annotation is typically used on repository methods, particularly on `save` methods, to trigger validation of the passed entity before it is saved to the database.
 
 #### Events
-13. **B. To provide a way to react to lifecycle changes of entities**
+11. **B. To provide a way to react to lifecycle changes of entities**
     - Explanation: Events in Spring Data REST are used to hook into the lifecycle of entities, allowing custom logic to be executed at various points, such as before or after saving an entity.
 
-14. **A. `BeforeCreateEvent`**
+12. **A. `BeforeCreateEvent`**
     - Explanation: `BeforeCreateEvent` is an example of a Spring Data REST lifecycle event, triggered before a new entity is created and saved.
 
 #### HAL and HATEOAS
-15. **B. Hypertext Application Language**
+13. **B. Hypertext Application Language**
     - Explanation: HAL (Hypertext Application Language) is a simple format that gives a consistent and easy way to hyperlink between resources in API.
 
-16. **A. To provide a way to navigate REST APIs through hyperlinks**
+14. **A. To provide a way to navigate REST APIs through hyperlinks**
     - Explanation: HATEOAS (Hypermedia as the Engine of Application State) is a constraint of REST application architecture that keeps the RESTful style architecture unique from most other network application architectures.
 
 #### ALPS
-17. **A. Application Level Profile Semantics**
+15. **A. Application Level Profile Semantics**
     - Explanation: ALPS is a data format used to describe the semantics of data and interactions in a RESTful API, providing a way to understand the API's capabilities and data structures.
 
-18. **A. To provide metadata about the API’s data structures and capabilities**
+16. **A. To provide metadata about the API’s data structures and capabilities**
     - Explanation: ALPS is used in Spring Data REST to describe the semantics and capabilities of the API, offering a machine-readable format for API metadata.
 
 #### Entity Modelling
-19. **A. A Java class that represents a database table**
+17. **A. A Java class that represents a database table**
     - Explanation: In Spring Data REST, an entity is a Java class annotated with `@Entity`, representing a table in a database where each instance of the class corresponds to a row in the table.
 
-20. **A. `@Entity`**
+18. **A. `@Entity`**
     - Explanation: The `@Entity` annotation is used to mark a Java class as an entity, which means it is bound to a database table.
