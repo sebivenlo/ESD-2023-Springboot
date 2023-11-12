@@ -20,7 +20,6 @@ import java.util.Date;
  * }
  * </pre>
  */
-
 @Entity
 @Getter
 @Setter
