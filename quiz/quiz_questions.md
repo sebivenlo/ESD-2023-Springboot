@@ -29,7 +29,7 @@
 #### Querying
 5. **What is the purpose of `@Query` annotation in Spring Data REST?**
    - A. To define custom SQL queries
-   - B. To secure a safe query response
+   - B. To validate query methods for repositories
    - C. To specify the HTTP query parameters
    - D. To validate query responses
 
