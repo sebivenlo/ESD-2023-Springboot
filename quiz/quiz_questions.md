@@ -59,59 +59,53 @@
     - C. To encrypt data
     - D. To validate the structure of the database
 
-10. **Where is the `@Valid` annotation typically used in Spring Data REST?**
-    - A. On entity classes
-    - B. On repository methods
-    - C. On custom query methods
-    - D. On controller methods
-
 #### Events
-11. **What is the purpose of events in Spring Data REST?**
+10. **What is the primary purpose of events in Spring Data REST?**
     - A. To handle HTTP requests
     - B. To provide a way to react to lifecycle changes of entities
     - C. To validate data
     - D. To configure the application context
 
-12. **Which of the following is an event type in Spring Data REST?**
+11. **Which of the following is an event type in Spring Data REST?**
     - A. `BeforeCreateEvent`
     - B. `AfterSaveEvent`
     - C. `PreValidateEvent`
     - D. `PostLoadEvent`
 
 #### HAL and HATEOAS
-13. **What does HAL stand for in the context of Spring Data REST?**
+12. **What does HAL stand for in the context of Spring Data REST?**
     - A. Hypermedia Application Language
     - B. Hypertext Application Language
     - C. Hyperlink Access Language
     - D. Hypertext Access Language
 
-14. **What is the primary purpose of HATEOAS in Spring Data REST?**
+13. **What is the primary purpose of HATEOAS in Spring Data REST?**
     - A. To provide a way to navigate REST APIs through hyperlinks
     - B. To increase the performance of REST APIs
     - C. To handle HTTP requests and responses
     - D. To validate REST endpoints
 
 #### ALPS
-15. **What does ALPS stand for in the context of Spring Data REST?**
+14. **What does ALPS stand for in the context of Spring Data REST?**
     - A. Application Level Profile Semantics
     - B. Advanced Lightweight Protocol Specification
     - C. Application Layer Protocol Syntax
     - D. Advanced Layered Paging System
 
-16. **What is the primary use of ALPS in Spring Data REST?**
+15. **What is the primary use of ALPS in Spring Data REST?**
     - A. To provide metadata about the API’s data structures and capabilities
     - B. To enhance the security of the API
     - C. To compress data in API responses
     - D. To manage API versioning
 
 #### Entity Modelling
-17. **In the context of Spring Data REST, what is an entity?**
+16. **In the context of Spring Data REST, what is an entity?**
     - A. A Java class that represents a database table
     - B. A unique identifier in a database
     - C. A REST endpoint
     - D. A JSON object
 
-18. **Which annotation is typically used to denote an entity class in Spring Data REST?**
+17. **Which annotation is typically used to denote an entity class in Spring Data REST?**
     - A. `@Entity`
     - B. `@Table`
     - C. `@Repository`
