@@ -19,6 +19,23 @@ A link to the assignment can be found [here](code/assignment.md).
 Our detailed research about the finer details of Spring Data Rest is
 available [here.](/research/spring_breakdown/README.md)
 
+
+### Docker Image
+> [!IMPORTANT]  
+> You do not need to use this image while working on the assignment.
+
+A pre-built image of the solution is available by executing the following command:
+
+```shell
+docker pull ghcr.io/sebivenlo/springboot_workshop_solution:latest
+```
+
+Alternatively, the same image is also publicly available via:
+
+```shell
+docker pull ntheres/esd_spring_data_rest
+```
+
 ### Introduction to Spring Data REST
 
 In the landscape of modern web applications,
